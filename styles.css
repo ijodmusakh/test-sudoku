@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: "Funnel Display", sans-serif;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers all child elements horizontally */
+  justify-content: center; /* Optional: Centers everything vertically if needed */
+  gap: 20px; /* Adds space between grid and buttons */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  width: 450px;
+  height: 450px;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+.grid-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.grid-container > div:hover {
+  background-color: rgb(238, 250, 255);
+  cursor: pointer;
+}
+
+.left-border-bold {
+  border-left: black 2px solid;
+}
+.left-border-dash {
+  border-left: black 1px dashed;
+}
+.border-top-left-radius {
+  border-top-left-radius: 25px;
+}
+
+.top-border-bold {
+  border-top: black 2px solid;
+}
+.top-border-dash {
+  border-top: black 1px dashed;
+}
+
+.right-border-bold {
+  border-right: black 2px solid;
+}
+.right-border-dash {
+  border-right: black 1px dashed;
+}
+.border-top-right-radius {
+  border-top-right-radius: 25px;
+}
+
+.bottom-border-bold {
+  border-bottom: black 2px solid;
+}
+.bottom-border-dash {
+  border-bottom: black 1px dashed;
+}
+.border-bottom-left-radius {
+  border-bottom-left-radius: 25px;
+}
+.border-bottom-right-radius {
+  border-bottom-right-radius: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons .btn {
+  padding: 10px 20px;
+  border-radius: 120px;
+  background-color: #f4f4f4;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons .btn:hover {
+  background-color: black;
+  color:#f4f4f4;
+  border-color: black;
+}
+
+.cell-selected {
+  background-color: rgb(219, 242, 252); /* Change the background to blue */
+}
+
+.selected {
+  border: 2px solid #4CAF50; /* Border matching the selected state */
+}
+
+.non-editable {
+  background-color: #ebebeb; /* Light gray background */
+  color: black; /* Text color */
+  font-weight: bold; /* Make text bold */
+  pointer-events: none; /* Disable click events */
+}
